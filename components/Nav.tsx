@@ -49,20 +49,18 @@ export default function Nav() {
           <Avatar className="w-24 lg:w-36 h-auto border-2 border-primary bg-secondary">
             <AvatarImage src="./avatar.png" />
             <AvatarFallback className="w-24 h-24 lg:w-36 lg:h-36 rounded-full border-1 border-primary">
-              AM
-            </AvatarFallback>
+              T N
+            </AvatarFallback>   
           </Avatar>
         </div>
         <h1 className="text-[42px] font-bold lg:text-start">
-          Hi, i&#39;m Alexander 👋
+          Hi, I&#39;m Tony 👋
         </h1>
         <h2 className="text-xl lg:text-start">
-          Product designer, developer, founder.
+          Data Science Student{" "}<span className="text-primary font-semibold">@ Macquarie Uni</span>
         </h2>
         <p className="text-lg lg:text-start text-muted-foreground">
-          I help innovative startups in AI, Web3, and Finance craft exceptional
-          user experiences, translating complex technologies into intuitive
-          interfaces that resonate with humans.
+          Passionate about uncovering insights from data through machine learning and deep learning. I love diving deep into complex datasets to discover patterns and build intelligent solutions that make a real impact.
         </p>
       </div>
       <nav className="lg:flex hidden">
@@ -85,7 +83,7 @@ export default function Nav() {
       <ul className="flex flex-row gap-6 mt-6 lg:mt-0">
         <Button variant="outline" size="icon">
           <a
-            href="https://github.com/0xAlexander"
+            href="https://github.com/idozii" 
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -94,7 +92,7 @@ export default function Nav() {
         </Button>
         <Button variant="outline" size="icon">
           <a
-            href="https://linkedin.com/in/0xAlexander"
+            href="https://www.linkedin.com/in/tuenguyenduynhat/" 
             target="_blank"
             rel="noopener noreferrer"
           >

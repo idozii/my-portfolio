@@ -7,32 +7,32 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://meikopoulos.com"),
-  alternates: {
-    canonical: "https://meikopoulos.com",
-  },
-  title: "Alexander Meikopoulos - Product Designer in AI, Web3, and Finance",
-  description:
-    "Alexander Meikopoulos is a Product designer, developer & founder.",
-  keywords:
-    "Alexander Meikopoulos, Product Designer, AI, Web3, Finance, User Experience, UI/UX Design, Design Systems, Front-end Development, Decentralized Finance, DeFi, Swoop Exchange, Vela Exchange, Stealth AI Startup, Technology, Innovation, Human-Centered Design",
-  openGraph: {
-    locale: "en_US",
-    siteName: "Alexander Meikopoulos",
-    type: "website",
-    title: "Alexander Meikopoulos",
+    metadataBase: new URL("https://tonynguyen.com"), 
+    alternates: {
+    canonical: "https://tonynguyen.com",
+    },
+    title: "Tony Nguyen - Data Scientist",
     description:
-      "Alexander Meikopoulos is a Product designer, developer & founder.",
-    url: "https://meikopoulos.com",
+      "Tony Nguyen is a Data Scientist.",
+    keywords:
+      "Tony Nguyen, Data Science, AI, Machine Learning, Deep Learning",
+    openGraph: {
+      locale: "en_US",
+      siteName: "Tony Nguyen",
+      type: "website",
+    title: "Tony Nguyen",
+    description:
+      "Tony Nguyen is a Data Scientist.",
+    url: "https://tonynguyen.com",
     images: [
       {
-        url: "./og-large-meik-2.jpg",
+        url: "./og-large-meik-2.jpg", 
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alexander Meikopoulos",
+    title: "Tony Nguyen",
   },
 };
 
