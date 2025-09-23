@@ -8,101 +8,69 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MoveRight } from "lucide-react";
 
 const jobPositions = [
   {
-    timeline: "Aug 2024 — Present",
-    currentPosition: "Founding Designer & Head of Product Design",
-    place: "Stealth AI Startup",
+    timeline: "Jun 2024 - Jul 2025",
+    currentPosition: "Teaching Assistant",
+    place: "Private Math Tutoring Centre",
     previousPositions: [""],
     description:
-      "Establishing and leading the design team for a Stealth AI Startup set to bring the New Era of Money. My role involves founding and leading the design team, setting the vision and standards for design excellence, direct branding and actively contributing to hands-on product design for going to market.",
+      "Supported instructors in delivering mathematics lessons to high school students, focusing on problem-solving skills and conceptual understanding. Assisted in preparing comprehensive teaching materials, exercises, and solutions to enhance student learning outcomes.",
     skills: [
-      "Brand Identity",
-      "Product Design",
-      "UI/UX Design",
-      "Design Systems",
-      "Design Strategy",
-      "Team Leadership",
-    ],
-  },
-  {
-    timeline: "Mar 2024 — Present",
-    currentPosition: "Head of Product Design",
-    place: "Vela Exchange",
-    previousPositions: ["Designer and Front-end Developer"],
-    description:
-      "Leading the design team for Vela Exchange, a community-first, decentralized perpetuals trading platform. My role involves setting the vision and standards for design excellence, and actively contributing to hands-on product design.",
-    skills: [
-      "Product Design",
-      "UI/UX Design",
-      "Design Systems",
-      "Design Strategy",
-      "Team Leadership",
-    ],
-  },
-  {
-    timeline: "Feb 2022 — Presents",
-    currentPosition: "Co-founder, Designer & Developer",
-    place: "Swoop Exchange",
-    previousPositions: [""],
-    description:
-      "Co-founded, designed, and developed a Next-Gen Decentralized Exchange from MVP to launch, scaling from zero to over $10M in trading volume. Swoop Exchange is powered by a novel Meta-Aggregation Engine that leverages sophisticated routing algorithms and APIs to automatically route trades from the most profitable liquidity sources, vastly improving swap efficiency and user experience.",
-    skills: [
-      "Typescript",
-      "JavaScript",
-      "CSS",
-      "Tailwind CSS",
-      "MUI",
-      "HTML",
-      "Figma",
-      "UI/UX Design",
-      "Blockchain tech",
-      "Project Management",
-      "Planning",
-      "Leadership",
-      "Testing & QA",
-    ],
-  },
-  {
-    timeline: "Aug 2016 — Mar 2024",
-    currentPosition: "Head of QA",
-    place: "Lykomitros Steel",
-    previousPositions: [
-      "Quality Assurance Engineer",
-      "QA/QC Administrative Support",
-    ],
-    description:
-      "Lead the QA department, focusing on renewable energy components in steel manufacturing. Maintained industry and client standards, ensuring product integrity for renewable energy.",
-    skills: [
-      "ISO Compliance",
-      "Quality Assurance",
-      "Engineering Management",
-      "ISO 9001",
-      "ISO 45001",
-      "ISO 14001",
-      "Requirement Assessment",
-      "Auditing",
-    ],
-  },
-  {
-    timeline: "Nov 2013 - May 2014",
-    currentPosition: "Digital Systems Admin - Internship",
-    place: "OTE Group (HTO)",
-    previousPositions: [""],
-    description:
-      "Gained valuable experience in digital systems administration, focusing on the management of contractors and capital.",
-    skills: [
-      "SQL",
-      "Administration",
+      "Mathematics",
+      "Teaching",
       "Problem-Solving",
-      "Computer Systems",
-      "System documentation",
-      "Networking",
-      "Cloud Computing",
-      "Automation",
-      "Scripting",
+      "Communication",
+      "Teamwork",
+      "Student Mentoring",
+    ],
+  },
+  {
+    timeline: "Feb 2021 - Dec 2024",
+    currentPosition: "Founder",
+    place: "UniqueS Facebook Page",
+    previousPositions: [""],
+    description:
+      "Founded and led a creative media team of 30+ members, managing workflows, schedules, and project tracking via Notion and Google Sheets. Designed data-driven posting strategies based on audience engagement trends and performance analytics. Utilized Excel to monitor productivity metrics and optimize resource distribution.",
+    skills: [
+      "Leadership",
+      "Project Management",
+      "Team Management",
+      "Excel",
+      "Notion",
+      "Google Sheets",
+      "Performance Analysis",
+    ],
+  },
+  {
+    timeline: "Feb 2022 - Jun 2023",
+    currentPosition: "Videographer",
+    place: "LUMIERE LHP Photography Club",
+    previousPositions: [""],
+    description:
+      "Filmed and edited event videos, promotional clips, and school activities to highlight student achievements and campus life. Managed complete video post-production pipeline including color correction, sound mixing, and visual effects for engaging storytelling under tight deadlines.",
+    skills: [
+      "Video Editing",
+      "Sound Mixing",
+      "Visual Effects",
+    ],
+  },
+  {
+    timeline: "May 2021 - Jun 2022",
+    currentPosition: "Head of Photography",
+    place: "Chicken Minds",
+    previousPositions: [""],
+    description:
+      "Led photography operations and oversaw video planning, storyboarding, and shot coordination to ensure smooth production workflows. Managed creative direction and technical execution for various multimedia projects.",
+    skills: [
+      "Photography",
+      "Video Planning",
+      "Storyboarding",
+      "Creative Direction",
+      "Production Management",
+      "Team Coordination",
+      "Technical Execution",
     ],
   },
 ];
@@ -113,6 +81,11 @@ export default function ExpCard() {
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/0 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
         <h2 className="text-sm font-bold uppercase tracking-widest lg:sr-only">
           Experience
+        </h2>
+      </div>
+      <div className="flex flex-col gap-4 lg:px-6 mb-8">
+        <h2 className="lg:block hidden text-xl font-bold lg:text-start">
+          EXPERIENCE
         </h2>
       </div>
       <>
@@ -147,19 +120,6 @@ export default function ExpCard() {
           </Card>
         ))}
       </>
-      <div className="lg:px-12 mt-12">
-        <a
-          href="mailto:alexander@meikopoulos.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center font-medium leading-tight text-foreground group"
-        >
-          <span className="border-b border-transparent pb-px transition hover:border-primary motion-reduce:transition-none">
-            Reach out for Full Resume
-          </span>
-          <MoveRight className="ml-1 inline-block h-5 w-5 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none" />
-        </a>
-      </div>
     </section>
   );
 }

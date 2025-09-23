@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, MoveRight } from "lucide-react";
 import { ModeToggle } from "./ui/toggle-mode";
 import useActiveSection from "@/hooks/useActiveSection";
 
@@ -14,6 +14,7 @@ export default function Nav() {
   const activeSection = useActiveSection([
     "about",
     "experience",
+    "education",
     "projects",
     "contact",
   ]);
@@ -21,6 +22,7 @@ export default function Nav() {
   const navItems: NavItem[] = [
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
+    { name: "Education", href: "#education" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
@@ -62,6 +64,19 @@ export default function Nav() {
         <p className="text-lg lg:text-start text-muted-foreground">
           Passionate about uncovering insights from data through machine learning and deep learning. I love diving deep into complex datasets to discover patterns and build intelligent solutions that make a real impact.
         </p>
+        <div className="mt-4">
+          <a
+            href="https://www.linkedin.com/in/tuenguyenduynhat/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center font-medium leading-tight text-foreground group"
+          >
+            <span className="border-b border-transparent pb-px transition hover:border-primary motion-reduce:transition-none">
+              View Full LinkedIn Profile
+            </span>
+            <MoveRight className="ml-1 inline-block h-5 w-5 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none" />
+          </a>
+        </div>
       </div>
       <nav className="lg:flex hidden">
         <ul className="flex flex-col w-max text-start gap-6 uppercase text-xs font-medium">

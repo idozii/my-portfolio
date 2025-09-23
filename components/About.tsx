@@ -9,17 +9,29 @@ export default function About() {
           About
         </h2>
       </div>
+      <div className="flex flex-col gap-4 lg:px-6 mb-8">
+        <h2 className="lg:block hidden text-xl font-bold lg:text-start">
+          ABOUT
+        </h2>
+      </div>
       <div className="flex flex-col gap-4">
         <p className="text-start text-muted-foreground lg:px-6">
-          [Write your first paragraph about yourself - your journey, what drives you, your core beliefs]
+          I am a data science student at{" "}
+          <a href="https://mq.edu.au/" className="text-primary dark:text-white font-medium" target="_blank" rel="noopener noreferrer">
+            Macquarie University
+          </a>
+          , an active member of the{" "}
+          <span className="text-primary dark:text-white font-medium">Macquarie Associate Computing Students</span> and{" "}
+          <span className="text-primary dark:text-white font-medium">Macquarie Overseas Vietnamese</span>. Currently seeking a data science internship opportunity.
         </p>
         <p className="text-start  text-muted-foreground lg:px-6">
-          [Write about your current work, companies you work for, projects you're involved in. Replace the links with your own]
+          My journey into data science began with a simple fascination: <span className="text-white">how can we uncover hidden stories within numbers?</span> This curiosity grew as I recognized data as an invaluable asset across industries and the key to solving complex challenges.
         </p>
         <p className="text-start text-muted-foreground lg:px-6">
-          [Write about your achievements, impact, or what you believe in - customize this section completely]
-          applications and experiences that are seamless extensions of
-          ourselves, serving real needs with simplicity and clarity.
+          Driven by the goal of becoming a capable and proficient data professional, I've been engaging in side projects, online learning, and data challenges to continuously refine my skills. I am eager to apply my expertise to help businesses identify gaps, uncover insights, and solve complex problems through data.
+        </p>
+        <p className="text-start text-muted-foreground lg:px-6">
+          Aside from studies, I spend my free time taking photos 📸 (when my gear cooperates!), spending time with my dachshund Toni, and watching badminton matches—the strategic gameplay always inspires my approach to problem-solving.
         </p>
       </div>
     </section>

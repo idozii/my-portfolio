@@ -91,6 +91,11 @@ export default function Projects() {
           Projects
         </h2>
       </div>
+      <div className="flex flex-col gap-4 lg:px-6 mb-8">
+        <h2 className="lg:block hidden text-xl font-bold lg:text-start">
+          PROJECTS
+        </h2>
+      </div>
       <>
         {jobProjects.map((project, index) => (
           <a

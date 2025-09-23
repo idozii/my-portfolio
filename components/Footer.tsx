@@ -5,11 +5,18 @@ export default function Footer() {
     <section>
       <div className="flex flex-col gap-4 lg:px-6 mt-16">
         <p className="text-sm text-start text-muted-foreground">
-          Based on{" "}
+          Website credits to{" "}
           <a className="text-foreground" href="https://brittanychiang.com">
-            Brittany Chiang&#39;s website
+            Brittany Chiang&#39;s design
           </a>{" "}
-          (they awesome). Coded in{" "}
+          and{" "}
+          <a className="text-foreground" href="https://meikopoulos.com">
+            Alexander Meikopoulos&#39;s source code
+          </a>{" "}
+          (Props to their works). I made my customization and fix some bugs/visual issues.
+        </p>
+        <p className="text-sm text-start text-muted-foreground">
+          Coded in{" "}
           <a className="text-foreground" href="https://code.visualstudio.com/">
             Visual Studio Code.
           </a>{" "}
