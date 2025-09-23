@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import ExpCard from "@/components/ExpCards";
 import Education from "@/components/Education";
 import Projects from "@/components/Projects";
+import Activities from "@/components/Activities";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -47,6 +48,7 @@ export default function Home() {
             <ExpCard />
             <Education />
             <Projects />
+            <Activities />
             <Contact />
             <Footer />
           </main>

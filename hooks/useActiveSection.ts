@@ -6,13 +6,35 @@ const useActiveSection = (sectionIds: string[]): string => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+        // Get all currently intersecting sections with their intersection ratios
+        const intersectingSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .map((entry) => ({
+            id: entry.target.id,
+            ratio: entry.intersectionRatio,
+            top: entry.boundingClientRect.top,
+          }))
+          .sort((a, b) => {
+            // If one section has significantly higher intersection ratio, prioritize it
+            const ratioDiff = Math.abs(a.ratio - b.ratio);
+            if (ratioDiff > 0.1) {
+              return b.ratio - a.ratio;
+            }
+            // Otherwise, prioritize the section closer to the top of viewport
+            return Math.abs(a.top) - Math.abs(b.top);
+          });
+
+        if (intersectingSections.length > 0) {
+          const newActiveSection = intersectingSections[0].id;
+          if (newActiveSection !== activeSection) {
+            setActiveSection(newActiveSection);
           }
-        });
+        }
       },
-      { threshold: 0.7 }
+      { 
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+        rootMargin: '-10% 0px -10% 0px'
+      }
     );
 
     sectionIds.forEach((sectionId) => {
@@ -23,7 +45,7 @@ const useActiveSection = (sectionIds: string[]): string => {
     });
 
     return () => observer.disconnect();
-  }, [sectionIds]);
+  }, [sectionIds, activeSection]);
 
   return activeSection;
 };

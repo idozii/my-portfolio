@@ -75,7 +75,7 @@ export default function Education() {
         </h2>
       </div>
       <div className="flex flex-col gap-4 lg:px-6 mb-8">
-        <h2 className="lg:block hidden text-xl font-bold lg:text-start">
+        <h2 className="lg:block hidden text-2xl font-bold lg:text-start text-foreground">
           EDUCATION
         </h2>
       </div>
@@ -83,28 +83,38 @@ export default function Education() {
         {educationEntries.map((edu, index) => (
           <Card
             key={index}
-            className="lg:p-6 mb-4 flex flex-col lg:flex-row w-full min-h-fit gap-0 lg:gap-5 border-transparent hover:border dark:lg:hover:border-t-blue-900 dark:lg:hover:bg-slate-800/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:hover:bg-slate-100/50 lg:hover:border-t-blue-200"
+            className="lg:p-6 mb-4 flex flex-col lg:flex-row w-full min-h-fit gap-0 lg:gap-5 border-transparent hover:border-slate-200 dark:hover:border-slate-700 dark:lg:hover:bg-slate-800/30 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:hover:bg-slate-50/80 transition-all duration-300 ease-in-out group"
           >
             <CardHeader className="h-full w-full p-0">
-              <CardTitle className="text-base text-slate-400 whitespace-nowrap">
+              <CardTitle className="text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap font-medium">
                 {edu.timeline}
               </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col p-0">
-              <p className="text-foreground font-bold">
-                {edu.currentPosition} • {edu.place}
-              </p>
+              <div className="mb-2">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                  {edu.currentPosition}
+                </h3>
+                <p className="text-base text-slate-600 dark:text-slate-300 font-medium">
+                  {edu.place}
+                </p>
+              </div>
               {edu.previousPositions.map((position, index) => (
-                <p key={index} className="text-slate-400 text-sm font-bold">
+                <p key={index} className="text-sm text-slate-500 dark:text-slate-400 font-medium mb-1">
                   {position}
                 </p>
               ))}
-              <CardDescription className="py-3 text-muted-foreground">
+              <CardDescription className="py-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                 {edu.description}
               </CardDescription>
-              <CardFooter className="p-0 flex flex-wrap gap-2">
+              <CardFooter className="p-0 flex flex-wrap gap-1.5 mt-3">
                 {edu.skills.map((skill, index) => (
-                  <Badge key={index}>{skill}</Badge>
+                  <Badge 
+                    key={index}
+                    className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-900/50 border-blue-200 dark:border-blue-700 transition-colors duration-200"
+                  >
+                    {skill}
+                  </Badge>
                 ))}
               </CardFooter>
             </CardContent>
@@ -114,9 +124,9 @@ export default function Education() {
       <div className="lg:px-12 mt-12 flex justify-center">
         <a
           href="/certificates"
-          className="inline-flex items-center font-medium leading-tight text-foreground group"
+          className="inline-flex items-center font-medium leading-tight text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 group"
         >
-          <span className="border-b border-transparent pb-px transition hover:border-primary motion-reduce:transition-none">
+          <span className="border-b border-transparent pb-px transition hover:border-blue-600 dark:hover:border-blue-400 motion-reduce:transition-none">
             View My Certificates
           </span>
           <MoveRight className="ml-1 inline-block h-5 w-5 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none" />

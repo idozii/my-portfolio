@@ -31,7 +31,7 @@ export default function CertificatesPage() {
       <div className="lg:flex lg:justify-center">
         <main className="flex flex-col pt-6 lg:pt-24 lg:w-full lg:py-24">
           <div className="flex flex-col gap-4 mb-8">
-            <h1 className="text-4xl font-bold lg:text-start">
+            <h1 className="text-4xl font-bold lg:text-start text-foreground">
               My Certificates
             </h1>
           </div>
@@ -39,36 +39,36 @@ export default function CertificatesPage() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-slate-200 dark:border-slate-700">
-                  <th className="py-3 pr-6 text-left text-slate-600 dark:text-slate-400 font-medium">
+                  <th className="py-3 pr-6 text-left text-sm text-slate-600 dark:text-slate-400 font-medium">
                     Year
                   </th>
-                  <th className="py-3 pr-6 text-left text-slate-600 dark:text-slate-400 font-medium">
+                  <th className="py-3 pr-6 text-left text-sm text-slate-600 dark:text-slate-400 font-medium">
                     Certificate
                   </th>
-                  <th className="py-3 pr-6 text-left text-slate-600 dark:text-slate-400 font-medium">
+                  <th className="py-3 pr-6 text-left text-sm text-slate-600 dark:text-slate-400 font-medium">
                     At
                   </th>
-                  <th className="py-3 pr-6 text-left text-slate-600 dark:text-slate-400 font-medium">
+                  <th className="py-3 pr-6 text-left text-sm text-slate-600 dark:text-slate-400 font-medium">
                     Skills
                   </th>
-                  <th className="py-3 text-right text-slate-600 dark:text-slate-400 font-medium">
+                  <th className="py-3 text-right text-sm text-slate-600 dark:text-slate-400 font-medium">
                     Link
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {certificates.map((cert, index) => (
-                  <tr key={index} className="border-b border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50">
-                    <td className="py-4 pr-6 text-slate-400 font-medium whitespace-nowrap">
+                  <tr key={index} className="border-b border-slate-200 dark:border-slate-700 hover:bg-slate-50/80 dark:hover:bg-slate-800/30 transition-colors duration-200">
+                    <td className="py-4 pr-6 text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
                       {cert.year}
                     </td>
                     <td className="py-4 pr-6">
-                      <div className="text-foreground font-medium">
+                      <div className="text-base text-foreground font-semibold">
                         {cert.certificate}
                       </div>
                     </td>
                     <td className="py-4 pr-6">
-                      <div className="text-slate-500 font-medium">
+                      <div className="text-sm text-slate-600 dark:text-slate-300 font-medium">
                         {cert.at}
                       </div>
                     </td>
@@ -77,8 +77,7 @@ export default function CertificatesPage() {
                         {cert.skills.map((skill, skillIndex) => (
                           <Badge 
                             key={skillIndex} 
-                            variant="secondary"
-                            className="text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                            className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-900/50 border-blue-200 dark:border-blue-700 transition-colors duration-200"
                           >
                             {skill}
                           </Badge>
@@ -90,7 +89,7 @@ export default function CertificatesPage() {
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
                       >
                         <ExternalLink className="h-4 w-4" />
                       </a>
