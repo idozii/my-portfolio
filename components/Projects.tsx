@@ -108,7 +108,7 @@ export default function Projects() {
             className="hover:cursor-pointer block animate-slide-up"
             style={{animationDelay: `${index * 0.2}s`}}
           >
-            <Card className="group lg:p-6 mb-4 flex flex-col lg:flex-row w-full min-h-fit gap-0 lg:gap-5 border-transparent hover:border-slate-200 dark:hover:border-slate-700 dark:lg:hover:bg-slate-800/30 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:hover:bg-slate-50/80 transition-all duration-500 ease-in-out card-glow hover:shadow-2xl hover:shadow-purple-500/10 hover:scale-[1.02] relative overflow-hidden">
+            <Card className="group lg:p-6 mb-4 flex flex-col lg:flex-row w-full min-h-fit gap-0 lg:gap-5 border-0 bg-transparent hover:bg-slate-50/30 dark:hover:bg-slate-800/20 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg transition-all duration-500 ease-in-out card-glow hover:shadow-2xl hover:shadow-purple-500/10 hover:scale-[1.02] relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="h-full w-full lg:w-1/3 mb-4 p-0 relative z-10">
                 <Image
@@ -117,7 +117,7 @@ export default function Projects() {
                   width={1920}
                   height={1080}
                   priority
-                  className="bg-[#141414] mt-2 border border-muted-foreground rounded-[0.5rem] group-hover:shadow-lg group-hover:shadow-purple-500/20 transition-all duration-300 group-hover:scale-105"
+                  className="mt-2 rounded-[0.5rem] group-hover:shadow-lg group-hover:shadow-purple-500/20 transition-all duration-300 group-hover:scale-105"
                 />
               </CardHeader>
               <CardContent className="flex flex-col p-0 w-full lg:w-2/3 relative z-10">

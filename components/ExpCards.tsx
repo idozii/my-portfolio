@@ -92,7 +92,7 @@ export default function ExpCard() {
         {jobPositions.map((job, index) => (
           <Card
             key={index}
-            className="lg:p-6 mb-4 flex flex-col lg:flex-row w-full min-h-fit gap-0 lg:gap-5 border-transparent hover:border-slate-200 dark:hover:border-slate-700 dark:lg:hover:bg-slate-800/30 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:hover:bg-slate-50/80 transition-all duration-500 ease-in-out group card-glow hover:shadow-2xl hover:shadow-purple-500/10 hover:scale-[1.02] animate-slide-up relative overflow-hidden"
+            className="lg:p-6 mb-4 flex flex-col lg:flex-row w-full min-h-fit gap-0 lg:gap-5 border-0 bg-transparent hover:bg-slate-50/30 dark:hover:bg-slate-800/20 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg transition-all duration-500 ease-in-out group card-glow hover:shadow-2xl hover:shadow-purple-500/10 hover:scale-[1.02] animate-slide-up relative overflow-hidden"
             style={{animationDelay: `${index * 0.2}s`}}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

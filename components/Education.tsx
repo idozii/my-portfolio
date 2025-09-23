@@ -41,11 +41,9 @@ const educationEntries = [
       "Computer Science",
       "Programming",
       "Algorithms",
-      "Software Development",
       "Data Structures",
       "Object-Oriented Programming",
       "Database Systems",
-      "Software Engineering",
     ],
   },
   {
@@ -83,35 +81,38 @@ export default function Education() {
         {educationEntries.map((edu, index) => (
           <Card
             key={index}
-            className="lg:p-6 mb-4 flex flex-col lg:flex-row w-full min-h-fit gap-0 lg:gap-5 border-transparent hover:border-slate-200 dark:hover:border-slate-700 dark:lg:hover:bg-slate-800/30 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:hover:bg-slate-50/80 transition-all duration-300 ease-in-out group"
+            className="lg:p-6 mb-4 flex flex-col lg:flex-row w-full min-h-fit gap-0 lg:gap-5 border-0 bg-transparent hover:bg-slate-50/30 dark:hover:bg-slate-800/20 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg transition-all duration-500 ease-in-out group card-glow hover:shadow-2xl hover:shadow-purple-500/10 hover:scale-[1.02] animate-slide-up relative overflow-hidden"
+            style={{animationDelay: `${index * 0.2}s`}}
           >
-            <CardHeader className="h-full w-full p-0">
-              <CardTitle className="text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap font-medium">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <CardHeader className="h-full w-full p-0 relative z-10">
+              <CardTitle className="text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap font-medium group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
                 {edu.timeline}
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex flex-col p-0">
+            <CardContent className="flex flex-col p-0 relative z-10">
               <div className="mb-2">
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-transparent bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text group-hover:from-purple-500 group-hover:to-blue-500 transition-all duration-300">
                   {edu.currentPosition}
                 </h3>
-                <p className="text-base text-slate-600 dark:text-slate-300 font-medium">
+                <p className="text-base text-slate-600 dark:text-slate-300 font-medium group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-green-600 group-hover:bg-clip-text transition-all duration-300">
                   {edu.place}
                 </p>
               </div>
-              {edu.previousPositions.map((position, index) => (
-                <p key={index} className="text-sm text-slate-500 dark:text-slate-400 font-medium mb-1">
+              {edu.previousPositions.map((position, posIndex) => (
+                <p key={posIndex} className="text-sm text-slate-500 dark:text-slate-400 font-medium mb-1 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
                   {position}
                 </p>
               ))}
-              <CardDescription className="py-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              <CardDescription className="py-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-slate-600 dark:group-hover:text-slate-200 transition-colors duration-300">
                 {edu.description}
               </CardDescription>
               <CardFooter className="p-0 flex flex-wrap gap-1.5 mt-3">
-                {edu.skills.map((skill, index) => (
+                {edu.skills.map((skill, skillIndex) => (
                   <Badge 
-                    key={index}
-                    className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-900/50 border-blue-200 dark:border-blue-700 transition-colors duration-200"
+                    key={skillIndex}
+                    className="text-xs bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 text-purple-800 dark:text-purple-200 hover:from-purple-200 hover:to-blue-200 dark:hover:from-purple-900/50 dark:hover:to-blue-900/50 border-purple-200 dark:border-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+                    style={{animationDelay: `${skillIndex * 0.05}s`}}
                   >
                     {skill}
                   </Badge>
