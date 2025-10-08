@@ -4,6 +4,36 @@ import { ExternalLink } from "lucide-react";
 const certificates = [
   {
     year: "2025",
+    title: "SQL Problem Solving",
+    issuer: "UCDavis",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/verify/4ESKONEF5EBT",
+  },
+  {
+    year: "2025",
+    title: "SQL for Data Science",
+    issuer: "UCDavis",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/verify/GRWFY2MZUV1N",
+  },
+  {
+    year: "2025",
+    title: "Data Analysis and Visualization with PowerBI",
+    issuer: "Microsoft",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/records/QSYJFVP3BY6N",
+  },
+  {
+    year: "2025",
+    title: "Data Visualization with Tableau",
+    issuer: "UCDavis",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/specialization/I8C2TDT1IJHZ",
+  },
+  {
+    year: "2025",
+    title: "Google Cloud Fundamentals: Core Infrastructure",
+    issuer: "Google",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/verify/PFGOTC53HBKO",
+  },
+  {
+    year: "2025",
     title: "Introduction to Git and GitHub",
     issuer: "Google",
     credentialUrl: "https://www.coursera.org/account/accomplishments/verify/8RJS5GM8F6ZD",
