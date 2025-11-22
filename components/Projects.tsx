@@ -27,7 +27,7 @@ const jobProjects = [
       "Pandas",
       "NumPy"
     ],
-    link: "https://github.com/idozii/CROP_AND_SOIL",
+    link: "https://crop-and-soil-1.onrender.com/",
   },
   {
     imagePath: "/interuni.png",
