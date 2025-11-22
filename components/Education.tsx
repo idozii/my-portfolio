@@ -17,17 +17,14 @@ const educationEntries = [
     place: "Macquarie University",
     previousPositions: [""],
     description:
-      "Pursuing advanced studies in Data Science with focus on machine learning, deep learning, and statistical analysis. Active member of Macquarie Associate Computing Students and Macquarie Overseas Vietnamese communities.",
+      "Pursuing advanced studies in Data Science with focus on machine learning, deep learning, and statistical analysis. Active member of computing and data science communities.",
     skills: [
       "Data Science",
       "Machine Learning",
       "Deep Learning",
-      "Statistics",
       "Python",
-      "Data Analytics",
-      "Statistical Inference",
+      "Statistical Analysis",
       "Data Visualization",
-      "Big Data",
     ],
   },
   {
@@ -36,13 +33,13 @@ const educationEntries = [
     place: "Ho Chi Minh City University of Technology",
     previousPositions: [""],
     description:
-      "Completed foundational studies in computer science with emphasis on programming, algorithms, and software development. Built strong technical foundation in various programming languages and software engineering principles.",
+      "Completed foundational studies in computer science with emphasis on programming, algorithms, and software development. Built strong technical foundation in software engineering.",
     skills: [
       "Computer Science",
       "Programming",
       "Algorithms",
       "Data Structures",
-      "Object-Oriented Programming",
+      "OOP",
       "Database Systems",
     ],
   },
@@ -52,14 +49,14 @@ const educationEntries = [
     place: "Le Hong Phong High School for the Gifted",
     previousPositions: [""],
     description:
-      "Completed rigorous academic program at a prestigious gifted high school, developing strong analytical and problem-solving skills. Specialized curriculum focused on advanced mathematics and sciences.",
+      "Completed rigorous academic program at prestigious gifted high school. Specialized curriculum focused on advanced mathematics and sciences with strong analytical foundation.",
     skills: [
       "Mathematics",
       "Physics",
       "Critical Thinking",
       "Problem Solving",
-      "Academic Excellence",
       "Research Skills",
+      "Academic Excellence",
     ],
   },
 ];
@@ -73,7 +70,7 @@ export default function Education() {
         </h2>
       </div>
       <div className="flex flex-col gap-4 lg:px-6 mb-8">
-        <h2 className="lg:block hidden text-2xl font-bold lg:text-start text-foreground">
+        <h2 className="lg:block hidden text-2xl font-bold lg:text-start text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-green-500 bg-clip-text animate-fade-in">
           EDUCATION
         </h2>
       </div>
@@ -122,15 +119,15 @@ export default function Education() {
           </Card>
         ))}
       </>
-      <div className="lg:px-12 mt-12 flex justify-center">
+      <div className="lg:px-12 mt-12 flex justify-center relative z-10">
         <a
           href="/certificates"
-          className="inline-flex items-center font-medium leading-tight text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 group"
+          className="inline-flex items-center font-medium leading-tight text-transparent bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text hover:from-purple-500 hover:to-blue-500 transition-all duration-300 group animate-fade-in hover:scale-105"
         >
-          <span className="border-b border-transparent pb-px transition hover:border-blue-600 dark:hover:border-blue-400 motion-reduce:transition-none">
+          <span className="border-b-2 border-transparent pb-px transition hover:border-purple-600 dark:hover:border-purple-400 motion-reduce:transition-none">
             View My Certificates
           </span>
-          <MoveRight className="ml-1 inline-block h-5 w-5 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none" />
+          <MoveRight className="ml-1 inline-block h-5 w-5 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none text-purple-600 group-hover:text-purple-500" />
         </a>
       </div>
     </section>

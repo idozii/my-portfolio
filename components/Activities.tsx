@@ -12,39 +12,51 @@ import { ExternalLink } from "lucide-react";
 
 const activities = [
   {
-    timeline: "2025",
-    title: "InterUni Datathon Participant",
+    timeline: "Sep 2025",
+    title: "Best Static Visualization (Undergraduate) - DataViz @MQ 2025",
+    organization: "Macquarie University",
+    description:
+      "Developed award-winning Tableau dashboard analyzing global energy data to evaluate progress toward SDG7. Focused on energy affordability, access rates, carbon intensity, and clean energy share across regions.",
+    skills: [
+      "Data Analysis",
+      "Tableau",
+      "Data Visualization",
+      "Statistical Analysis",
+      "Dashboard Design",
+      "Storytelling with Data"
+    ],
+    link: "https://bit.ly/3K2sHMW",
+  },
+  {
+    timeline: "Aug 2025",
+    title: "InterUni Datathon 2025",
     organization: "University Competition",
     description:
-      "Participated in the prestigious InterUni Datathon 2025, competing against teams from multiple universities. Developed a comprehensive ski resort analytics project for season planning, utilizing advanced data science techniques including time series forecasting, predictive modeling, and strategic recommendation systems.",
+      "Competed against multiple university teams developing comprehensive ski resort analytics project. Utilized time series forecasting, predictive modeling, and strategic recommendations for season planning.",
     skills: [
       "Data Science",
-      "Competitive Analysis",
       "Time Series Forecasting",
+      "Predictive Modeling",
       "Team Collaboration",
-      "Presentation Skills",
       "Statistical Modeling"
     ],
     link: "https://github.com/idozii/InterUni-Datathon-2025",
   },
   {
-    timeline: "2025",
+    timeline: "Jul 2025",
     title: "TheNextAnalyst - Power BI Challenge",
     organization: "StartTrain",
     description:
-      "Participated in TheNextAnalyst Power BI Challenge by StartTrain, analyzing comprehensive business data to craft actionable strategies. Developed an interactive dashboard revealing key insights: 42.2% ROS profitability, Europe leading revenue generation, USA as top-performing country, and Asia showing promising growth potential. Provided strategic recommendations for Video Games momentum, Web channel optimization, and regional expansion strategies.",
+      "Created interactive Power BI dashboard revealing key business insights including 42.2% ROS profitability and regional performance. Provided strategic recommendations for product optimization and expansion.",
     skills: [
       "Power BI",
       "Business Intelligence",
       "Data Visualization",
       "Strategic Analysis",
-      "Dashboard Development",
-      "Business Analytics",
-      "Regional Analysis",
-      "Sales Performance Analysis"
+      "Business Analytics"
     ],
     link: "https://lnkd.in/gn9eeFzR",
-  },
+  }
 ];
 
 export default function Activities() {
@@ -73,12 +85,12 @@ export default function Activities() {
                 {activity.timeline}
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex flex-col p-0">
+            <CardContent className="flex flex-col p-0 relative z-10">
               <div className="flex items-center gap-2 mb-2">
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-transparent bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text group-hover:from-purple-500 group-hover:to-blue-500 transition-all duration-300">
                   {activity.title}
                 </h3>
-                <span className="text-base text-slate-600 dark:text-slate-300 font-medium">
+                <span className="text-base text-slate-600 dark:text-slate-300 font-medium group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-green-600 group-hover:bg-clip-text transition-all duration-300">
                   • {activity.organization}
                 </span>
                 {activity.link && (
@@ -86,20 +98,21 @@ export default function Activities() {
                     href={activity.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 ml-1"
+                    className="inline-flex items-center text-purple-600 dark:text-purple-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 ml-1 hover:scale-125 transform hover:rotate-12"
                   >
-                    <ExternalLink className="h-4 w-4" />
+                    <ExternalLink className="h-5 w-5" />
                   </a>
                 )}
               </div>
-              <CardDescription className="py-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              <CardDescription className="py-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-slate-600 dark:group-hover:text-slate-200 transition-colors duration-300">
                 {activity.description}
               </CardDescription>
               <CardFooter className="p-0 flex flex-wrap gap-1.5 mt-3">
-                {activity.skills.map((skill, index) => (
+                {activity.skills.map((skill, skillIndex) => (
                   <Badge 
-                    key={index} 
-                    className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-900/50 border-blue-200 dark:border-blue-700 transition-colors duration-200"
+                    key={skillIndex}
+                    className="text-xs bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 text-purple-800 dark:text-purple-200 hover:from-purple-200 hover:to-blue-200 dark:hover:from-purple-900/50 dark:hover:to-blue-900/50 border-purple-200 dark:border-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 animate-fade-in"
+                    style={{animationDelay: `${skillIndex * 0.05}s`}}
                   >
                     {skill}
                   </Badge>
